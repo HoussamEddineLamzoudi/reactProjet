@@ -1,14 +1,10 @@
-// import React from 'react'
-import {useState} from 'react'
+import React from 'react'
 
-function FeedbackItem() {
-    const [R, setR] = useState(7)
-    const [T, setT] = useState('Houssam-Eddine Lamzoudi')
-
+function FeedbackItem({itemProp}) {
     return (
         <div className="card">
-            <div className="num-display">{R}</div>
-            <div className="text-display"> {T} </div>
+            <div className="num-display">{itemProp.rating}</div>
+            <div className="text-display"> {itemProp.text} </div>
         </div> 
     )
     }
