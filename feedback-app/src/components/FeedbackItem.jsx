@@ -1,9 +1,9 @@
 import React from 'react'
 
-function FeedbackItem({itemProp}) {
+function FeedbackItem({itemProp, deleteFunc}) {
     return (
         <div className="card">
-            <div className="num-display">{itemProp.rating}</div>
+            <div onClick={() => deleteFunc(itemProp.id)} className="num-display">{itemProp.rating}</div>
             <div className="text-display"> {itemProp.text} </div>
         </div> 
     )
